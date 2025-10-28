@@ -1,0 +1,24 @@
+.connection-page {
+  background: linear-gradient(to bottom, #f3f4f6, #e5e7eb);
+}
+
+.connection-card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.connection-card:hover {
+  transform: scale(1.02);
+}
+
+.connection-status {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.disconnect-btn {
+  transition: background-color 0.3s ease;
+}

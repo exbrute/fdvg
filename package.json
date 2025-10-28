@@ -1,0 +1,29 @@
+{
+  "name": "vpn-desktop",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "cross-env NODE_ENV=development electron .",
+    "electron-dev": "concurrently -k \"npm run dev\" \"wait-on http://localhost:5173 && cross-env NODE_ENV=development electron .\"",
+    "dev:manual": "echo 'Run in two terminals: 1) npm run dev 2) npm run electron'",
+    "build:css": "npx tailwindcss -i ./src/styles/input.css -o ./public/output.css --watch"
+  },
+  "dependencies": {
+    "d3-geo": "^3.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-simple-maps": "^3.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.0.0",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "electron": "^22.0.0",
+    "tailwindcss": "^3.2.0",
+    "vite": "^5.0.0",
+    "wait-on": "^7.0.1"
+  }
+}
